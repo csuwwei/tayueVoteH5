@@ -15,11 +15,11 @@ export default {
     }
   },
   methods: {
-      init: function(e) {
-          axios.get("http://localhost:9000/wykd-user/userService/index").then(res => {
-            console.log(res);
-            alert(res.data);
-            this.returnValue = res.data;
+      init: function() {
+          axios.get("/tayue/userController/index").then(res => {
+            debugger;
+            console.log("====>",res);
+            this.returnValue = res.data.name;
           });
       }
   },
